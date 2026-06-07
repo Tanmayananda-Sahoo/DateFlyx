@@ -2,10 +2,11 @@ import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import SplitType from "split-type";
+import { useNavigate } from "react-router";
 
 gsap.registerPlugin(ScrollTrigger);
-
 const SubHeroSection = () => {
+  const navigate = useNavigate();
   const sectionRef = useRef(null);
 
   useLayoutEffect(() => {
@@ -46,7 +47,10 @@ const SubHeroSection = () => {
       splitInstances.forEach((split) => split.revert());
     };
   }, []);
-
+  
+  const handleClick = () => {
+    navigate('/all-cafes')
+  }
   return (
     <div className="sub-hero-section" ref={sectionRef}>
       <div className="contents">
@@ -67,7 +71,7 @@ const SubHeroSection = () => {
       </div>
 
       <div className="explore-btn">
-        <button>Explore Cafes</button>
+        <button onClick={handleClick}>Explore Cafes</button>
       </div>
     </div>
   );

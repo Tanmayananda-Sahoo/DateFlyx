@@ -1,14 +1,36 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react';
+import ScrollTrigger from 'gsap/ScrollTrigger.js';
 
+gsap.registerPlugin(ScrollTrigger);
 const FooterSection = () => {
+    const sectionRef = useRef(null);
     const secondPartFirstList = ['Cafes', 'Events', 'About'];
     const secondPartSecondList = ['Help Center', 'Safety', 'Contact'];
     const secondPartThirdList = ['Privacy', 'Terms'];
+    
+    useGSAP(() => {
+        gsap.from('.revealing-text-footer', {
+            y: 100,
+            duration: 1,
+            ease: "expo.out",
+            stagger: 0.1,
+            scrollTrigger: {
+                trigger: '.revealing-text-footer',
+                start: "top 95%",
+            }
+        })
+    }, {scope: sectionRef})
   return (
-    <div className='footer-section'>
+    <div className='footer-section' ref={sectionRef}>
         <div className="footer-first-part">
-            <h1>DateFlyx</h1>
-            <p>Create meaningful connections through curated cafe experiences.</p>
+            <div className='footer-menu-wrapper'>
+                <h1 className='revealing-text-footer'>DateFlyx</h1>
+            </div>
+            <div className="footer-menu-wrapper">
+                <p className='revealing-text-footer'>Create meaningful connections through curated cafe experiences.</p>
+            </div>
         </div>
         <div className="footer-second-part">
             <div className='footer-second-part-first-list'>
@@ -17,7 +39,9 @@ const FooterSection = () => {
                     {
                         secondPartFirstList.map((elem, key) => {
                             return(
-                                <li key={key}>{elem}</li>
+                                <div key={key} className="footer-menu-wrapper">
+                                    <li className='revealing-text-footer'>{elem}</li>
+                                </div>
                             )
                         })
                     }
@@ -29,7 +53,9 @@ const FooterSection = () => {
                     {
                         secondPartSecondList.map((elem, key) => {
                             return(
-                                <li key={key}>{elem}</li>
+                                <div key={key} className="footer-menu-wrapper">
+                                    <li className='revealing-text-footer'>{elem}</li>
+                                </div>
                             )
                         })
                     }
@@ -41,7 +67,9 @@ const FooterSection = () => {
                     {
                         secondPartThirdList.map((elem, key) => {
                             return(
-                                <li key={key}>{elem}</li>
+                                <div key={key} className="footer-menu-wrapper">
+                                    <li className='revealing-text-footer'>{elem}</li>
+                                </div>
                             )
                         })
                     }

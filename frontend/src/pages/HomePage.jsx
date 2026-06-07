@@ -5,6 +5,7 @@ import ExploreByLocation from '../components/ExploreByLocation.jsx'
 import ReviewSection from '../components/ReviewsSections.jsx'
 import FooterSection from '../components/FooterSection.jsx'
 import Navbar from '../components/Navbar.jsx'
+import GetStarted from '../components/GetStarted.jsx'
 
 const HomePage = () => {
   return (
@@ -16,6 +17,9 @@ const HomePage = () => {
         <ExploreByLocation />
       </div>
       <ReviewSection />
+      <div className="page">
+        <GetStarted />
+      </div>
       <FooterSection />
     </div>
   )

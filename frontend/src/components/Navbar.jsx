@@ -23,7 +23,7 @@ const Navbar = () => {
                     navMenu.map((elem, key) => {
                         return(
                             <div key={key} className='nav-menu'>
-                                <div className='revealing-text-nav'><Link className='links' to={`/${elem == 'Home' ? '/' : elem.toLowerCase().replace(" ", "-")}`}>{elem}</Link></div>
+                                <div className='revealing-text-nav'><Link className='links' to={`/${elem == 'Home' ? '' : elem.toLowerCase().replace(" ", "-")}`}>{elem}</Link></div>
                             </div>
                         )
                     })

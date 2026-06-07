@@ -412,3 +412,35 @@ button {
 .footer-second-part-third-list {
     min-width: 120px;
 }
+
+.get-started-section {
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-content: center;
+    background-image: url('https://images.pexels.com/photos/7156283/pexels-photo-7156283.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.get-started-header {
+    font-family: 'ppNeueMontreal-normal';
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.get-started-para {
+    font-family: 'ppNeueMontreal-thin';
+    font-size: small;
+    margin-bottom: 2vw;
+    overflow:hidden;
+}
+
+.button-get-started {
+    overflow: hidden;
+}
+
+.footer-menu-wrapper {
+    overflow: hidden;
+}
