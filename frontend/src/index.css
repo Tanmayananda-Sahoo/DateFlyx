@@ -20,7 +20,53 @@
 
 .app {
     width: 100%;
+    min-height: 100vh;
+}
+
+.home-page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    flex:1;
     padding: 2.5vw;
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    font-family: 'ppNeueMontreal-normal';
+}
+
+.navbar-logo {
+    flex: 1;
+    padding: 0.9vw;
+    overflow: hidden;
+}
+
+.nav-menu-section {
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+    padding: 0.9vw 2vw 0.9vw 2vw;
+    font-weight: bold;
+}
+
+.nav-menu {
+    font-size: small;
+    cursor:pointer;
+    overflow: hidden;
 }
 
 .hero-section {
@@ -36,7 +82,6 @@
 }
 
 .contents {
-    background-color: white;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -66,8 +111,7 @@ button {
 .explore-by-location {
     display: flex;
     height: 70vh;
-    flex: 1;
-    padding-bottom: 5%;
+    margin-bottom: 10vw;
 }
 
 .left,
@@ -82,7 +126,6 @@ button {
     object-fit: cover;
     position: absolute;
     animation: fadeIn 0.4s ease-in-out;
-    background-color: yellow;
 }
 
 @keyframes fadeIn {
@@ -98,27 +141,28 @@ button {
 }
 
 .image-0 {
-    left: 5%;
-    top: 10%;
+    left: 15%;
+    top: -20%;
 }
 
 .image-1 {
-    left: 50%;
+    left: 40%;
+    top: 3%;
 }
 
 .image-2 {
-    top: 40%;
+    top: 24%;
     left: 10%;
 }
 
 .image-3 {
-    top: 60%;
-    left: 50%;
+    top: 50%;
+    left: 40%;
 }
 
 .image-4 {
-    top: 20%;
-    left: 40%;
+    top: 68%;
+    left: 10%;
 }
 
 .center {
@@ -217,6 +261,7 @@ button {
 
 .review-section-wrapper {
     overflow-x: hidden;
+    margin-bottom: 10vw;
 }
 
 .review-section {
@@ -224,7 +269,7 @@ button {
     width: max-content;
     display: flex;
     gap: 2vw;
-    padding: 5vw 0 5vw 0;
+    padding: 4vw 0 4vw 0;
 }
 
 .review-card-component {
@@ -265,4 +310,105 @@ button {
 .review-bottom {
     font-family: 'ppNeueMontreal-normal';
     font-weight: bold;
+}
+
+.review-section-header {
+    font-family: "ppNeueMontreal-normal";
+    font-weight: bold;
+    text-align: center;
+}
+
+/* .footer-section {
+    background-color: black;
+    color: white;
+    display: flex;
+}
+
+.footer-first-part {
+    background-color: yellow;
+    width: 30vw;
+    padding: 1.5vw;
+}
+
+.footer-second-part {
+    background-color: green;
+    width: 70vw;
+    display: flex;
+}
+
+.footer-lists {
+    list-style: none;
+} */
+
+.footer-section {
+    width: 100%;
+    padding: 4rem 8%;
+    background: #111111;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6rem;
+
+    margin-top: auto;
+}
+
+.footer-first-part {
+    flex: 1;
+    max-width: 400px;
+}
+
+.footer-first-part h1 {
+    font-family: 'ppNeueMontreal-normal';
+    font-size: 2.5rem;
+    letter-spacing: -0.05rem;
+}
+
+.footer-first-part p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #b8b8b8;
+    font-family: 'ppNeueMontreal-normal';
+    font-size: small;
+}
+
+.footer-second-part {
+    display: flex;
+    gap: 5rem;
+}
+
+.footer-headers {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    color: white;
+    font-family: 'ppNeueMontreal-normal';
+    font-weight: bold;
+    font-size: medium;
+}
+
+.footer-lists {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'ppNeueMontreal-normal';
+    font-size: small;
+}
+
+.footer-lists li {
+    margin-bottom: 0.9rem;
+    color: #b8b8b8;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-lists li:hover {
+    color: white;
+}
+
+.footer-second-part-first-list,
+.footer-second-part-second-list,
+.footer-second-part-third-list {
+    min-width: 120px;
 }

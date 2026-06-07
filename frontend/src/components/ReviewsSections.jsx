@@ -25,6 +25,9 @@ const ReviewsSections = () => {
     });
     return (
         <div className="review-section-wrapper">
+            <div className="review-section-header">
+                <h1>What our users say?</h1>
+            </div>
             <div className='review-section'>
                 <ReviewCard />
                 <ReviewCard />

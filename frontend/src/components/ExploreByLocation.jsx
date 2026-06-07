@@ -30,37 +30,6 @@ const ExploreByLocation = () => {
         },
     ]
     return (
-        // <div className='explore-by-location'>
-        //     <div className='left'>
-        //         {
-        //             locations.map((location, index) => {
-        //                 return (
-        //                     <img src={location.images[0]} alt={location.title} key={index} className={`location-image image-${index}`} />
-        //                 )
-        //             })
-        //         }
-        //     </div>
-        //     <div className="center">
-        //         <ul className='location-container'>
-        //             {
-        //                 locations.map((location, index) => {
-        //                     return (
-        //                         <li key={index} className='location'>{location.title}</li>
-        //                     )
-        //                 })
-        //             }
-        //         </ul>
-        //     </div>
-        //     <div className="right">
-        //             {
-        //                 locations.map((location, index) => {
-        //                     return (
-        //                         <img src={location.images[1]} alt={location.title} key={index} className={`location-image image-${index}`} />
-        //                     )
-        //                 })
-        //             }
-        //     </div>
-        // </div>
         <div className="explore-by-location">
 
             <div className="left">
