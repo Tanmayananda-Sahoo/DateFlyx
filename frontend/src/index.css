@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
+
 @font-face {
     font-family: 'ppNeueMontreal-thin';
     src: url('./assets/ppneuemontreal-thin.otf') format('opentype');
@@ -16,6 +18,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Geist";
 }
 
 .app {
@@ -34,7 +37,7 @@
     width: 100%;
     min-height: 100vh;
     flex:1;
-    padding: 2.5vw;
+    padding: 0 2.5vw;
 }
 
 .links {
@@ -46,7 +49,8 @@
     width: 100%;
     height: auto;
     display: flex;
-    font-family: 'ppNeueMontreal-normal';
+    /* position:fixed; */
+    background-color: white;
 }
 
 .navbar-logo {
@@ -67,6 +71,8 @@
     font-size: small;
     cursor:pointer;
     overflow: hidden;
+    letter-spacing: -0.03rem;
+    font-weight: 600;
 }
 
 .hero-section {
@@ -88,30 +94,35 @@
     margin-bottom: 1rem;
 }
 
-.tagline {
-    font-family: 'ppNeueMontreal-thin';
-    font-size: 1rem;
+.tagline h3{
+    /* font-family: 'ppNeueMontreal-thin'; */
+    font-size: 1.5vw;
+    font-weight: 500;
+    letter-spacing: -0.04rem;
 }
 
-.sub-tags {
-    font-family: 'ppNeueMontreal-normal';
-    font-size: 1.3rem;
+.sub-tags h4{
+    /* font-family: 'ppNeueMontreal-normal'; */
+    font-size: 1.7vw;
+    font-weight: 500;
+    letter-spacing: -0.06rem;
 }
 
 button {
     background-color: black;
     color: white;
-    font-family: 'ppNeueMontreal-normal';
-    font-size: 1rem;
-    padding: 1.3rem 1.7rem;
+    /* font-family: 'ppNeueMontreal-normal'; */
+    font-size: 1.2vw;
+    padding: 1.5vw 1.9vw;
     border: none;
     cursor: pointer;
+    letter-spacing: -0.04rem;
 }
 
 .explore-by-location {
     display: flex;
     height: 70vh;
-    margin-bottom: 10vw;
+    margin-bottom: 7vw;
 }
 
 .left,
@@ -173,7 +184,7 @@ button {
 .center li {
     text-decoration: none;
     list-style: none;
-    font-family: 'ppNeueMontreal-normal';
+    /* font-family: 'ppNeueMontreal-normal'; */
     font-size: 5.2vw;
     letter-spacing: -0.1rem;
     color: #C3C2C1;
@@ -203,13 +214,13 @@ button {
 }
 
 .cafe-list-page-header h1 {
-    font-family: 'ppNeueMontreal-normal';
+    /* font-family: 'ppNeueMontreal-normal'; */
     letter-spacing: -0.01rem;
     font-size: 3vw;
 }
 
 .cafe-list-page-header h3 {
-    font-family: 'ppNeueMontreal-thin';
+    /* font-family: 'ppNeueMontreal-thin'; */
     font-size: 1.7vw;
 }
 
@@ -249,13 +260,13 @@ button {
 
 .component-card-location h4 {
     text-transform: uppercase;
-    font-family: 'ppNeueMontreal-normal';
+    /* font-family: 'ppNeueMontreal-normal'; */
     letter-spacing: -0.01rem;
     font-size: 1.6vw;
 }
 
 .component-card-title p {
-    font-family: 'ppNeueMontreal-normal';
+    /* font-family: 'ppNeueMontreal-normal'; */
     font-size: 0.9vw;
 }
 
@@ -287,13 +298,13 @@ button {
 .review-header {
     display: flex;
     justify-content: space-between;
-    font-family: 'ppNeueMontreal-normal';
+    /* font-family: 'ppNeueMontreal-normal'; */
     font-weight: bold;
     margin-bottom: 1.7vw;
 }
 
 .review {
-    font-family: 'ppNeueMontreal-thin';
+    /* font-family: 'ppNeueMontreal-thin'; */
     font-weight: bold;
     margin-bottom: 1.7vw;
 }
@@ -308,37 +319,15 @@ button {
 }
 
 .review-bottom {
-    font-family: 'ppNeueMontreal-normal';
+    /* font-family: 'ppNeueMontreal-normal'; */
     font-weight: bold;
 }
 
 .review-section-header {
-    font-family: "ppNeueMontreal-normal";
+    /* font-family: "ppNeueMontreal-normal"; */
     font-weight: bold;
     text-align: center;
 }
-
-/* .footer-section {
-    background-color: black;
-    color: white;
-    display: flex;
-}
-
-.footer-first-part {
-    background-color: yellow;
-    width: 30vw;
-    padding: 1.5vw;
-}
-
-.footer-second-part {
-    background-color: green;
-    width: 70vw;
-    display: flex;
-}
-
-.footer-lists {
-    list-style: none;
-} */
 
 .footer-section {
     width: 100%;
@@ -360,7 +349,7 @@ button {
 }
 
 .footer-first-part h1 {
-    font-family: 'ppNeueMontreal-normal';
+    /* font-family: 'ppNeueMontreal-normal'; */
     font-size: 2.5rem;
     letter-spacing: -0.05rem;
 }
@@ -369,7 +358,7 @@ button {
     font-size: 1rem;
     line-height: 1.7;
     color: #b8b8b8;
-    font-family: 'ppNeueMontreal-normal';
+    /* font-family: 'ppNeueMontreal-normal'; */
     font-size: small;
 }
 
@@ -383,7 +372,7 @@ button {
     font-weight: 600;
     margin-bottom: 1.2rem;
     color: white;
-    font-family: 'ppNeueMontreal-normal';
+    /* font-family: 'ppNeueMontreal-normal'; */
     font-weight: bold;
     font-size: medium;
 }
@@ -392,7 +381,7 @@ button {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-family: 'ppNeueMontreal-normal';
+    /* font-family: 'ppNeueMontreal-normal'; */
     font-size: small;
 }
 
@@ -425,13 +414,13 @@ button {
 }
 
 .get-started-header {
-    font-family: 'ppNeueMontreal-normal';
+    /* font-family: 'ppNeueMontreal-normal'; */
     font-weight: bold;
     overflow: hidden;
 }
 
 .get-started-para {
-    font-family: 'ppNeueMontreal-thin';
+    /* font-family: 'ppNeueMontreal-thin'; */
     font-size: small;
     margin-bottom: 2vw;
     overflow:hidden;
@@ -443,4 +432,382 @@ button {
 
 .footer-menu-wrapper {
     overflow: hidden;
+}
+
+.gallery-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5vw 0;
+    margin-bottom: 7vw;
+    /* font-family: 'ppNeueMontreal-normal'; */
+}
+
+.gallery-left {
+    width: 30%;
+    padding-left: 2.5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-left h2 {
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: -0.2rem;
+}
+
+.slider-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.slider-controls button {
+    border: none;
+    background: transparent;
+
+    font-size: 2rem;
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+.slider-controls button:hover {
+    transform: scale(1.15);
+}
+
+.gallery-right {
+    width: 70%;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    gap: 1.5rem;
+
+    width: max-content;
+}
+
+.image-card {
+    width: 320px;
+    flex-shrink: 0;
+}
+
+.image-card img {
+    width: 100%;
+    height: 550px;
+
+    object-fit: cover;
+}
+
+.image-card h4 {
+    margin-top: 0.8rem;
+
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.text-wrapper-gallery {
+    overflow: hidden;
+}
+
+.contact-page-main {
+    width: 100%;
+    min-height: 100vh;
+    /* font-family: 'ppNeueMontreal-normal'; */
+}
+
+/* ================= HEADER ================= */
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.contact-label {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1vw;
+}
+
+.contact-heading {
+    font-size: 2vw;
+    font-weight: 400;
+    line-height: 1.2;
+    max-width: 1100px;
+    margin: auto;
+    color: #7f7f7f;
+}
+
+.contact-heading span {
+    color: #111;
+}
+
+/* ================= CONTENT ================= */
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+}
+
+.contact-image-wrapper {
+    flex: 1;
+}
+
+.contact-image {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+}
+
+.contact-form-wrapper {
+    flex: 1;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 2vw;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9vw;
+    margin-bottom: 0.1 vw;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #8e8e8e;
+    background: transparent;
+    padding: 0.8vw 0;
+    font-size: 1vw;
+    outline: none;
+}
+
+.send-btn {
+    margin-top: 2vw;
+    width: 180px;
+    height: 60px;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+    transform: translateY(-3px);
+}
+
+.contact-extra-info {
+    margin-top: 4rem;
+}
+
+.contact-extra-info p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.contact-extra-info a {
+    color: black;
+}
+
+/* ================= SOCIAL ================= */
+
+.social-section {
+    margin-top: 10vw;
+    text-align: center;
+}
+
+.social-heading {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 400;
+}
+
+.social-icons {
+    margin-top: 4vw;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.social-icons a {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #eceae7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-8px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-image {
+        height: 500px;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contact-page {
+        padding: 4rem 6%;
+    }
+
+    .contact-heading {
+        font-size: 2rem;
+    }
+
+    .social-heading {
+        font-size: 2.2rem;
+    }
+
+    .social-icons a {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+.about-us-image {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.about-us {
+    font-family: 'Geist';
+    font-weight:900;
+    letter-spacing: -0.08rem;
+    background-image: url('https://images.pexels.com/photos/1524335/pexels-photo-1524335.jpeg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    align-content: center;
+    text-align: center;
+    margin-bottom: 8vw;
+}
+
+.about-us-section {
+    width: 100%;
+    display: flex;
+    gap: 10%;
+    min-height: 100vh;
+    margin-bottom: 8vw;
+}
+
+.about-left {
+    flex: 1;
+    text-align: end;
+
+}
+
+.about-left p {
+    font-weight: 400;
+    letter-spacing: -0.03rem;
+    font-size: 1.1vw;
+}
+
+.about-right {
+    width: 60%;
+}
+
+.about-right h2 {
+    font-family: 'Geist';
+    font-size: 3vw;
+    font-weight: 400;
+    letter-spacing: -0.04rem;
+    text-align: left;
+    margin-bottom: 1vw;
+}
+
+.about-right p {
+    font-weight: 400;
+    letter-spacing: -0.03rem;
+    font-size: 1.2vw;
+    width: 50%;
+    margin-bottom: 1.5vw;
+}
+
+.contact-section-about {
+    width: 100%;
+    display: flex;
+    gap: 10%;
+    margin-bottom: 8vw;
+}
+
+.contact-section-about-left {
+    flex: 1;
+    text-align: end;
+}
+
+.contact-section-about-left p {
+    font-weight: 400;
+    letter-spacing: -0.03rem;
+    font-size: 1.1vw;
+}
+
+.contact-section-about-right {
+    width: 60%;
+}
+
+.contact-section-about-right h1 {
+    font-size: 3vw;
+    font-weight: 400;
+    letter-spacing: -0.04rem;
+    text-align: left;
+}
+
+.about-us-link {
+    color: black;
+}
+
+.about-secondary-image {
+    width: 100%;
+    margin-bottom: 8vw;
+    display: flex;
+    justify-content: end;
+}
+
+.secondary-image {
+    width: 40%;
+    height: 100%;
+    background-position: cover;
+    background-position: center;
+}
+
+.secondary-image img {
+    width: 100%;
+    height: 100%;
+
 }
