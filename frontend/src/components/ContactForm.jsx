@@ -19,7 +19,6 @@ const ContactPage = () => {
       </div>
 
       <div className="contact-content">
-
         <div className="contact-image-wrapper">
           <img
             src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"

@@ -18,7 +18,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Geist";
+    /* font-family: "Geist"; */
 }
 
 .app {
@@ -43,6 +43,11 @@
 .links {
     text-decoration: none;
     color: black;
+    font-weight: 300;
+    letter-spacing: -0.01rem;
+    font-size: 0.9vw;
+    font-family: 'Geist Mono';
+    text-transform: uppercase;
 }
 
 .navbar {
@@ -54,25 +59,32 @@
 }
 
 .navbar-logo {
+    font-family: 'ppNeueMontreal-normal';
     flex: 1;
     padding: 0.9vw;
     overflow: hidden;
 }
 
+.navbar-logo h3 {
+    font-weight: 600;
+    letter-spacing: -0.05rem;
+}
+
 .nav-menu-section {
     display: flex;
-    gap: 3vw;
+    gap: 2.5vw;
     align-items: center;
     padding: 0.9vw 2vw 0.9vw 2vw;
     font-weight: bold;
 }
 
 .nav-menu {
+    font-family: 'Geist Mono';
     font-size: small;
     cursor:pointer;
-    overflow: hidden;
-    letter-spacing: -0.03rem;
+    overflow-y: hidden;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .hero-section {
@@ -95,15 +107,15 @@
 }
 
 .tagline h3{
-    /* font-family: 'ppNeueMontreal-thin'; */
+    font-family: 'Geist';
     font-size: 1.5vw;
     font-weight: 500;
-    letter-spacing: -0.04rem;
+    letter-spacing: -0.1rem;
 }
 
 .sub-tags h4{
-    /* font-family: 'ppNeueMontreal-normal'; */
-    font-size: 1.7vw;
+    font-family: 'ppNeueMontreal-normal';
+    font-size: 2.1vw;
     font-weight: 500;
     letter-spacing: -0.06rem;
 }
@@ -111,15 +123,16 @@
 button {
     background-color: black;
     color: white;
-    /* font-family: 'ppNeueMontreal-normal'; */
+    font-family: 'ppNeueMontreal-normal';
     font-size: 1.2vw;
     padding: 1.5vw 1.9vw;
     border: none;
     cursor: pointer;
-    letter-spacing: -0.04rem;
+    letter-spacing: -0.02rem;
 }
 
 .explore-by-location {
+    font-family: 'ppNeueMontreal-normal';
     display: flex;
     height: 70vh;
     margin-bottom: 7vw;
@@ -211,17 +224,17 @@ button {
 
 .cafe-list-page-header {
     margin-bottom: 8vw;
+    font-family: 'ppNeueMontreal-normal';
 }
 
 .cafe-list-page-header h1 {
-    /* font-family: 'ppNeueMontreal-normal'; */
     letter-spacing: -0.01rem;
     font-size: 3vw;
 }
 
 .cafe-list-page-header h3 {
-    /* font-family: 'ppNeueMontreal-thin'; */
     font-size: 1.7vw;
+    font-weight: 200;
 }
 
 .cafe-list-section {
@@ -260,14 +273,14 @@ button {
 
 .component-card-location h4 {
     text-transform: uppercase;
-    /* font-family: 'ppNeueMontreal-normal'; */
+    font-family: 'ppNeueMontreal-normal';
     letter-spacing: -0.01rem;
     font-size: 1.6vw;
 }
 
 .component-card-title p {
-    /* font-family: 'ppNeueMontreal-normal'; */
-    font-size: 0.9vw;
+    font-family: 'Geist';
+    font-size: 1vw;
 }
 
 .review-section-wrapper {
@@ -290,22 +303,21 @@ button {
     0 12px 24px rgba(0, 0, 0, 0.12),
     0 24px 48px rgba(0, 0, 0, 0.08);
     border-radius: 7px;
-    height: 15vw;
-    padding: 1vw;
+    padding: 1.1vw 1.5vw;
     flex-shrink: 0;
 }
 
 .review-header {
     display: flex;
     justify-content: space-between;
-    /* font-family: 'ppNeueMontreal-normal'; */
+    font-family: 'ppNeueMontreal-normal';
     font-weight: bold;
     margin-bottom: 1.7vw;
 }
 
 .review {
-    /* font-family: 'ppNeueMontreal-thin'; */
-    font-weight: bold;
+    font-family: 'Geist';
+    font-weight: 400;
     margin-bottom: 1.7vw;
 }
 
@@ -319,12 +331,13 @@ button {
 }
 
 .review-bottom {
-    /* font-family: 'ppNeueMontreal-normal'; */
+    font-family: 'ppNeueMontreal-normal';
     font-weight: bold;
+    text-align: end;
 }
 
 .review-section-header {
-    /* font-family: "ppNeueMontreal-normal"; */
+    font-family: 'ppNeueMontreal-normal';
     font-weight: bold;
     text-align: center;
 }
@@ -334,12 +347,10 @@ button {
     padding: 4rem 8%;
     background: #111111;
     color: #ffffff;
-
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 6rem;
-
     margin-top: auto;
 }
 
@@ -349,7 +360,7 @@ button {
 }
 
 .footer-first-part h1 {
-    /* font-family: 'ppNeueMontreal-normal'; */
+    font-family: 'ppNeueMontreal-normal';
     font-size: 2.5rem;
     letter-spacing: -0.05rem;
 }
@@ -358,7 +369,7 @@ button {
     font-size: 1rem;
     line-height: 1.7;
     color: #b8b8b8;
-    /* font-family: 'ppNeueMontreal-normal'; */
+    font-family: 'ppNeueMontreal-normal';
     font-size: small;
 }
 
@@ -372,7 +383,7 @@ button {
     font-weight: 600;
     margin-bottom: 1.2rem;
     color: white;
-    /* font-family: 'ppNeueMontreal-normal'; */
+    font-family: 'ppNeueMontreal-normal';
     font-weight: bold;
     font-size: medium;
 }
@@ -381,7 +392,7 @@ button {
     list-style: none;
     padding: 0;
     margin: 0;
-    /* font-family: 'ppNeueMontreal-normal'; */
+    font-family: 'ppNeueMontreal-normal';
     font-size: small;
 }
 
@@ -414,16 +425,17 @@ button {
 }
 
 .get-started-header {
-    /* font-family: 'ppNeueMontreal-normal'; */
+    font-family: 'ppNeueMontreal-normal';
     font-weight: bold;
     overflow: hidden;
 }
 
 .get-started-para {
-    /* font-family: 'ppNeueMontreal-thin'; */
+    font-family: 'Geist';
     font-size: small;
     margin-bottom: 2vw;
     overflow:hidden;
+    font-weight: 400;
 }
 
 .button-get-started {
@@ -441,10 +453,10 @@ button {
     justify-content: space-between;
     padding: 2.5vw 0;
     margin-bottom: 7vw;
-    /* font-family: 'ppNeueMontreal-normal'; */
 }
 
 .gallery-left {
+    font-family: 'ppNeueMontreal-normal';
     width: 30%;
     padding-left: 2.5vw;
     display: flex;
@@ -465,10 +477,9 @@ button {
 .slider-controls button {
     border: none;
     background: transparent;
-
     font-size: 2rem;
     cursor: pointer;
-
+    color: black;
     transition: transform 0.3s ease;
 }
 
@@ -478,6 +489,7 @@ button {
 
 .gallery-right {
     width: 70%;
+    font-family: 'Geist';
 }
 
 .slider-wrapper {
@@ -504,10 +516,9 @@ button {
     object-fit: cover;
 }
 
-.image-card h4 {
+.image-card h5 {
     margin-top: 0.8rem;
-
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: 400;
 }
 
@@ -526,6 +537,7 @@ button {
 .contact-header {
     text-align: center;
     margin-bottom: 5rem;
+    font-family: 'ppNeueMontreal-normal';
 }
 
 .contact-label {
@@ -582,6 +594,7 @@ button {
     font-size: 0.9vw;
     margin-bottom: 0.1 vw;
     text-transform: uppercase;
+    font-family: 'Geist Mono';
 }
 
 .form-group input,
@@ -593,6 +606,7 @@ button {
     padding: 0.8vw 0;
     font-size: 1vw;
     outline: none;
+    font-family: 'ppNeueMontreal-normal';
 }
 
 .send-btn {
@@ -612,6 +626,7 @@ button {
 }
 
 .contact-extra-info {
+    font-family: 'ppNeueMontreal-normal';
     margin-top: 4rem;
 }
 
@@ -629,11 +644,13 @@ button {
 .social-section {
     margin-top: 10vw;
     text-align: center;
+    margin-bottom: 6vw;
 }
 
 .social-heading {
     font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 400;
+    font-family: 'ppNeueMontreal-normal';
 }
 
 .social-icons {
@@ -641,6 +658,7 @@ button {
     display: flex;
     justify-content: center;
     gap: 2vw;
+    cursor: pointer;
 }
 
 .social-icons a {
@@ -729,13 +747,20 @@ button {
 .about-left {
     flex: 1;
     text-align: end;
+    align-content: center;
+    
+}
 
+.about-left-text {
+    overflow-y: hidden;
 }
 
 .about-left p {
-    font-weight: 400;
-    letter-spacing: -0.03rem;
-    font-size: 1.1vw;
+    font-weight: 300;
+    letter-spacing: -0.01rem;
+    font-size: 0.9vw;
+    font-family: 'Geist Mono';
+    text-transform: uppercase;
 }
 
 .about-right {
@@ -743,7 +768,7 @@ button {
 }
 
 .about-right h2 {
-    font-family: 'Geist';
+    font-family: 'ppNeueMontreal-normal';
     font-size: 3vw;
     font-weight: 400;
     letter-spacing: -0.04rem;
@@ -752,6 +777,7 @@ button {
 }
 
 .about-right p {
+    font-family: 'Geist';
     font-weight: 400;
     letter-spacing: -0.03rem;
     font-size: 1.2vw;
@@ -769,12 +795,19 @@ button {
 .contact-section-about-left {
     flex: 1;
     text-align: end;
+    align-content: center;
+}
+
+.contact-about-left-text-wrapper {
+    overflow-y: hidden;
 }
 
 .contact-section-about-left p {
-    font-weight: 400;
-    letter-spacing: -0.03rem;
-    font-size: 1.1vw;
+    font-weight: 300;
+    letter-spacing: -0.01rem;
+    font-size: 0.9vw;
+    font-family: 'Geist Mono';
+    text-transform: uppercase;
 }
 
 .contact-section-about-right {
@@ -786,6 +819,7 @@ button {
     font-weight: 400;
     letter-spacing: -0.04rem;
     text-align: left;
+    font-family: 'ppNeueMontreal-normal';
 }
 
 .about-us-link {
@@ -810,4 +844,8 @@ button {
     width: 100%;
     height: 100%;
 
+}
+
+.contact-section-about-right-text-wrapper {
+    overflow-y: hidden;
 }

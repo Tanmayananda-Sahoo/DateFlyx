@@ -8,7 +8,7 @@ const ImageCard = (props) => {
                 alt=""
             />
             <div className="text-wrapper-gallery">
-                <h4 className='revealing-text-gallery'>{props.subtitle}</h4>
+                <h5 className='revealing-text-gallery'>{props.subtitle}</h5>
             </div>
         </div>
     )

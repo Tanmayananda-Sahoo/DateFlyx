@@ -28,7 +28,7 @@ const FooterSection = () => {
             <div className='footer-menu-wrapper'>
                 <h1 className='revealing-text-footer'>DateFlyx</h1>
             </div>
-            <div className="footer-menu-wrapper">
+            <div className="footer-menu-wrapper footer-subtext">
                 <p className='revealing-text-footer'>Create meaningful connections through curated cafe experiences.</p>
             </div>
         </div>

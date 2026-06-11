@@ -15,7 +15,7 @@ const ReviewCard = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur deleniti dolores a ex animi nemo quos corrupti autem totam, assumenda eaque expedita vel eum quibusdam porro earum odio. Dicta.
         </div>
         <div className="review-bottom">
-            "DateFlyx"
+            DateFlyx
         </div>
     </div>
   )
