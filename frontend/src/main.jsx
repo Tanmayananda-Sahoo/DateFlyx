@@ -8,6 +8,7 @@ import CafeListPage from './pages/CafeListPage.jsx';
 import AboutUsPage from './pages/AboutUsPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import SmoothScroll from '../utils/SmoothScroll.jsx';
+import CafeDetailsPage from './pages/CafeDetailsPage.jsx';
 
 createRoot(document.getElementById('root')).render(
     <BrowserRouter>
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/all-cafes' element={<CafeListPage />} />
         <Route path='/about-us' element={<AboutUsPage/>} />
         <Route path='/contact' element={<ContactPage/>} />
+        <Route path='/cafe' element={<CafeDetailsPage/>} />
       </Routes>
     </BrowserRouter>,
 )

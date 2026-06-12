@@ -1,8 +1,14 @@
 import React from 'react'
+import {useNavigate} from 'react-router'
 
 const ComponentCard = (props) => {
+  const navigate = useNavigate();
+  const handleCardClick = () => {
+    navigate('/cafe');
+  }
+
   return (
-    <div className='component-card'>
+    <div className='component-card' onClick={handleCardClick}>
       <div className='component-card-image'>
         <img src={props.image} alt='Component' />
       </div>

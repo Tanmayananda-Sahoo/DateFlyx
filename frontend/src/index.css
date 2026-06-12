@@ -14,6 +14,23 @@
     font-style: normal;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.45);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -263,6 +280,30 @@ button {
 .component-card-image {
     height: 29vw;
     width: 27.3vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.component-card-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.component-card-image img {
+    transition: 0.3s all ease-in-out;
+}
+
+.component-card:hover .component-card-image::after {
+    opacity: 1;
+}
+
+.component-card:hover .component-card-image img{
+    scale: 1.05;
 }
 
 .component-card-image img {
@@ -331,9 +372,11 @@ button {
 }
 
 .review-bottom {
-    font-family: 'ppNeueMontreal-normal';
-    font-weight: bold;
-    text-align: end;
+    font-family: 'Geist Mono';
+    font-size: small;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: end
 }
 
 .review-section-header {
@@ -748,7 +791,6 @@ button {
     flex: 1;
     text-align: end;
     align-content: center;
-    
 }
 
 .about-left-text {
@@ -848,4 +890,134 @@ button {
 
 .contact-section-about-right-text-wrapper {
     overflow-y: hidden;
+}
+
+.cafe-detail-nav {
+    width: 100%;
+    height: auto;
+    padding: 1vw 2vw;
+}
+
+.cafe-arrow-wrapper {
+    border: 1px solid black;
+    padding: 0.5vw;
+    width: fit-content;
+    display: flex;
+    align-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: x-large;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cafe-arrow-wrapper:hover .arrow{
+    transform: rotate(45deg);
+}
+
+.cafe-desc-section {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    gap: 10%;
+    padding: 8vw 0;
+}
+
+.cafe-desc-left {
+    flex: 1;
+    text-align: end;
+    align-content: center;
+}
+
+.cafe-desc-left p {
+    font-weight: 300;
+    letter-spacing: -0.01rem;
+    font-size: 0.9vw;
+    font-family: 'Geist Mono';
+    text-transform: uppercase;
+}
+
+.cafe-desc-right {
+    height: 100%;
+    width: 50%;
+}
+
+.cafe-desc-right h2 {
+    font-family: 'ppNeueMontreal-normal';
+    font-size: 3vw;
+    font-weight: 400;
+    letter-spacing: -0.04rem;
+    text-align: left;
+}
+
+.cafe-detail-img {
+    height: 100vh;
+    width: 100%;
+    background-image: url('https://images.pexels.com/photos/32621534/pexels-photo-32621534.jpeg');
+    background-position: center;
+    background-size: cover;
+    align-content: start;
+    text-align: end;
+    align-content: end;
+    color: white;
+    padding-bottom: 2vw;
+    padding-right: 2vw;
+    margin-bottom: 8vw;
+}
+
+.cafe-detail-img h1 {
+    font-weight: 300;
+    letter-spacing: -0.01rem;
+    font-size: 1vw;
+    font-family: 'Geist Mono';
+    text-transform: uppercase;
+}
+
+.cafe-detail-header {
+    height: fit-content;
+    width: 100%;
+    padding: 8vw 0;
+    text-align: center;
+}
+
+.cafe-detail-header h5 {
+    font-weight: 400;
+    letter-spacing: -0.01rem;
+    font-size: 0.9vw;
+    font-family: 'Geist Mono';
+    text-transform: uppercase;
+}
+
+.cafe-detail-header h1 {
+    font-family: 'ppNeueMontreal-normal';
+    font-size: 5vw;
+    letter-spacing: -0.1rem;
+}
+
+.cafe-detail-location {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    gap: 5%;
+    margin-bottom: 8vw;
+}
+
+.cafe-location-left {
+    flex: 1;
+    text-align: end;
+    align-content: center;
+}
+
+.cafe-location-left p {
+    font-weight: 300;
+    letter-spacing: -0.01rem;
+    font-size: 0.9vw;
+    font-family: 'Geist Mono';
+    text-transform: uppercase;
+}
+
+.cafe-location-right {
+    width: 60%;
 }
