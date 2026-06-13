@@ -15,9 +15,6 @@ const Navbar = () => {
     })
     return (
         <div className='navbar'>
-            {/* <div className="navbar-logo">
-                <h3 className='revealing-text-nav'>DateFlyx</h3>
-            </div> */}
             <div className="nav-menu-section">
                 {
                     navMenu.map((elem, key) => {
@@ -28,6 +25,12 @@ const Navbar = () => {
                         )
                     })
                 }
+            </div>
+            <div className="breaking-space">
+                
+            </div>
+            <div className="nav-location">
+                pune, maharashtra
             </div>
         </div>
     )

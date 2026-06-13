@@ -7,13 +7,13 @@ import FooterSection from '../components/FooterSection.jsx'
 import Navbar from '../components/Navbar.jsx'
 import GetStarted from '../components/GetStarted.jsx'
 import GallerySection from '../components/GallerySection.jsx'
+// import HeroSectionDesc from '../components/HeroSectionDesc.jsx'
 
 const HomePage = () => {
   return (
     <div className='home-page-wrapper'>
-      <Navbar/>
+      <HeroSection />
       <div className='page'>
-        <HeroSection />
         <SubHeroSection />
         <ExploreByLocation />
       </div>

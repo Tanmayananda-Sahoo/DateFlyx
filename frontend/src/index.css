@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap');
+
 @font-face {
     font-family: 'ppNeueMontreal-thin';
     src: url('./assets/ppneuemontreal-thin.otf') format('opentype');
@@ -53,7 +55,7 @@
 .page {
     width: 100%;
     min-height: 100vh;
-    flex:1;
+    flex: 1;
     padding: 0 2.5vw;
 }
 
@@ -61,9 +63,9 @@
     text-decoration: none;
     color: black;
     font-weight: 300;
-    letter-spacing: -0.01rem;
+    letter-spacing: -0.05rem;
     font-size: 0.9vw;
-    font-family: 'Geist Mono';
+    font-family: 'Inter';
     text-transform: uppercase;
 }
 
@@ -71,8 +73,8 @@
     width: 100%;
     height: auto;
     display: flex;
-    /* position:fixed; */
     background-color: white;
+    /* margin-bottom: 2vw; */
 }
 
 .navbar-logo {
@@ -93,20 +95,47 @@
     align-items: center;
     padding: 0.9vw 2vw 0.9vw 2vw;
     font-weight: bold;
+    flex: 1;
+    justify-content: space-around;
 }
 
 .nav-menu {
-    font-family: 'Geist Mono';
-    font-size: small;
-    cursor:pointer;
+    cursor: pointer;
     overflow-y: hidden;
-    font-weight: 600;
+}
+
+.hero-section-header {
+    overflow-y: hidden;
+    margin-bottom: 2vw;
+}
+
+.hero-section-header h1 {
+    font-family: 'ppNeueMontreal-normal';
+    font-size: 28vw;
+}
+
+.hero-section-desc {
+    width: 100%;
+    height: fit-content;
+    font-family: 'ppNeueMontreal-normal';
+    display: flex;
+    gap: 20%;
+}
+
+.hero-section-uppercase {
+    flex: 1;
+}
+
+.hero-section-uppercase h2 {
     text-transform: uppercase;
 }
 
-.hero-section {
-    height: 100vh;
-    width: 100%;
+.hero-section-lowercase {
+    width: 40%;
+}
+
+.hero-section-lowercase p {
+    font-size: small;
 }
 
 .sub-hero-section {
@@ -123,14 +152,14 @@
     margin-bottom: 1rem;
 }
 
-.tagline h3{
+.tagline h3 {
     font-family: 'Geist';
     font-size: 1.5vw;
     font-weight: 500;
     letter-spacing: -0.1rem;
 }
 
-.sub-tags h4{
+.sub-tags h4 {
     font-family: 'ppNeueMontreal-normal';
     font-size: 2.1vw;
     font-weight: 500;
@@ -264,9 +293,9 @@ button {
 
 .component-card {
     box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.08),
-    0 12px 24px rgba(0, 0, 0, 0.12),
-    0 24px 48px rgba(0, 0, 0, 0.08);
+        0 2px 8px rgba(0, 0, 0, 0.08),
+        0 12px 24px rgba(0, 0, 0, 0.12),
+        0 24px 48px rgba(0, 0, 0, 0.08);
     height: 36vw;
     padding: 1.3vw;
     display: flex;
@@ -302,7 +331,7 @@ button {
     opacity: 1;
 }
 
-.component-card:hover .component-card-image img{
+.component-card:hover .component-card-image img {
     scale: 1.05;
 }
 
@@ -340,9 +369,9 @@ button {
 .review-card-component {
     width: 30vw;
     box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.08),
-    0 12px 24px rgba(0, 0, 0, 0.12),
-    0 24px 48px rgba(0, 0, 0, 0.08);
+        0 2px 8px rgba(0, 0, 0, 0.08),
+        0 12px 24px rgba(0, 0, 0, 0.12),
+        0 24px 48px rgba(0, 0, 0, 0.08);
     border-radius: 7px;
     padding: 1.1vw 1.5vw;
     flex-shrink: 0;
@@ -477,7 +506,7 @@ button {
     font-family: 'Geist';
     font-size: small;
     margin-bottom: 2vw;
-    overflow:hidden;
+    overflow: hidden;
     font-weight: 400;
 }
 
@@ -766,7 +795,7 @@ button {
 
 .about-us {
     font-family: 'Geist';
-    font-weight:900;
+    font-weight: 900;
     letter-spacing: -0.08rem;
     background-image: url('https://images.pexels.com/photos/1524335/pexels-photo-1524335.jpeg');
     background-position: center;
@@ -913,7 +942,7 @@ button {
     transition: transform 0.3s ease-in-out;
 }
 
-.cafe-arrow-wrapper:hover .arrow{
+.cafe-arrow-wrapper:hover .arrow {
     transform: rotate(45deg);
 }
 
@@ -1020,4 +1049,393 @@ button {
 
 .cafe-location-right {
     width: 60%;
+}
+
+.df-hero {
+    height: 100vh;
+    /* max-height: 100vh; */
+    background: #FFFFFF;
+    color: #0A0A0A;
+    font-family: 'Inter', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 2.6fr 1fr;
+    grid-template-rows: 1fr auto;
+    overflow: hidden;
+    position: relative;
+    padding: 0 56px;
+    box-sizing: border-box;
+}
+
+/* ── Watermark ── */
+.df-watermark {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.df-watermark-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(100px, 14vw, 220px);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: transparent;
+    -webkit-text-stroke: 1px #EDEBE6;
+    white-space: nowrap;
+    user-select: none;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 1.6s ease 0.1s, transform 1.6s ease 0.1s;
+}
+
+.df-watermark-text.vis {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Left column ── */
+.df-col-left {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    padding: 0 0 0 0;
+}
+
+.df-stat {
+    opacity: 0;
+    transform: translateX(-18px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.df-stat.vis {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.df-stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: #0A0A0A;
+    line-height: 1;
+}
+
+.df-stat-rule {
+    width: 22px;
+    height: 1px;
+    background: #DDD9D2;
+    margin: 6px 0;
+}
+
+.df-stat-label {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #AAAAAA;
+}
+
+.df-left-tagline {
+    font-family: 'Geist', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: #999;
+    line-height: 1.75;
+    max-width: 150px;
+    opacity: 0;
+    transform: translateX(-16px);
+    transition: opacity 0.8s ease 0.55s, transform 0.8s ease 0.55s;
+}
+
+.df-left-tagline.vis {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ── Center column ── */
+.df-col-center {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 36px;
+    gap: 0;
+}
+
+.df-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: #C9A96E;
+    margin-bottom: 24px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.7s ease 0.3s, transform 0.7s ease 0.3s;
+}
+
+.df-eyebrow.vis {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.df-headline {
+    font-family: 'ppNeueMontreal-normal';
+    font-size: clamp(44px, 5.8vw, 88px);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.09rem;
+    color: #0A0A0A;
+    margin: 0;
+}
+
+.df-headline em {
+    font-family: '';
+    font-style: italic;
+    color: #C9A96E;
+}
+
+.df-headline-line {
+    display: block;
+    overflow: hidden;
+}
+
+.df-headline-inner {
+    display: block;
+    opacity: 0;
+    transform: translateY(56px);
+    transition: opacity 0.9s ease, transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.df-headline-inner.vis {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.df-gold-rule {
+    width: 1px;
+    height: 44px;
+    background: linear-gradient(to bottom, transparent, #C9A96E, transparent);
+    margin: 28px auto;
+    opacity: 0;
+    transition: opacity 1s ease 1s;
+}
+
+.df-gold-rule.vis {
+    opacity: 1;
+}
+
+.df-sub {
+    font-size: 12.5px;
+    line-height: 1.9;
+    color: #999;
+    letter-spacing: 0.04em;
+    max-width: 340px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.8s ease 1.1s, transform 0.8s ease 1.1s;
+}
+
+.df-sub.vis {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.df-cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 36px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.8s ease 1.25s, transform 0.8s ease 1.25s;
+}
+
+.df-cta-row.vis {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.df-btn-primary {
+    background: #0A0A0A;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.df-btn-primary:hover {
+    background: #C9A96E;
+}
+
+.df-btn-ghost {
+    background: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #BBBBBB;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.df-btn-ghost:hover {
+    color: #0A0A0A;
+}
+
+.df-btn-ghost:hover .df-arrow {
+    transform: translateX(4px);
+}
+
+.df-arrow {
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+/* ── Right column ── */
+.df-col-right {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 32px;
+}
+
+.df-specials {
+    text-align: right;
+    opacity: 0;
+    transform: translateX(16px);
+    transition: opacity 0.8s ease 0.4s, transform 0.8s ease 0.4s;
+}
+
+.df-specials.vis {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.df-specials-label {
+    font-size: 10px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: #C9A96E;
+    margin-bottom: 12px;
+}
+
+.df-specials-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.df-specials-list li {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #0A0A0A;
+    line-height: 2.1;
+    letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.df-dot {
+    width: 3px;
+    height: 3px;
+    background: #C9A96E;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.df-hours {
+    text-align: right;
+    opacity: 0;
+    transform: translateX(16px);
+    transition: opacity 0.8s ease 0.6s, transform 0.8s ease 0.6s;
+}
+
+.df-hours.vis {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.df-hours-label {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #BBBBBB;
+    margin-bottom: 8px;
+}
+
+.df-hours-time {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    color: #0A0A0A;
+    line-height: 1.9;
+}
+
+/* ── Bottom strip (row 2, spans all 3 cols) ── */
+.df-bottom {
+    grid-column: 1 / -1;
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid #F0EDE8;
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.8s ease 1.45s;
+}
+
+.df-bottom.vis {
+    opacity: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+    .df-hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        padding: 0 24px;
+    }
+
+    .df-col-left,
+    .df-col-right {
+        display: none;
+    }
+
+    .df-col-center {
+        grid-row: 1;
+    }
+
+    .df-bottom {
+        grid-row: 2;
+    }
+
+    .df-awards {
+        gap: 14px;
+    }
 }
