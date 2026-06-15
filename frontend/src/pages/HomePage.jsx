@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import HeroSection from '../components/HeroSection.jsx'
 import SubHeroSection from '../components/SubHeroSection.jsx'
 import ExploreByLocation from '../components/ExploreByLocation.jsx'
@@ -10,6 +10,9 @@ import GallerySection from '../components/GallerySection.jsx'
 // import HeroSectionDesc from '../components/HeroSectionDesc.jsx'
 
 const HomePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   return (
     <div className='home-page-wrapper'>
       <HeroSection />
