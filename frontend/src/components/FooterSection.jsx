@@ -1,15 +1,21 @@
 import React, {useRef} from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react';
-import ScrollTrigger from 'gsap/ScrollTrigger.js';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import {useNavigate} from 'react-router';
 
 gsap.registerPlugin(ScrollTrigger);
 const FooterSection = () => {
+    const navigate = useNavigate();
     const sectionRef = useRef(null);
-    const secondPartFirstList = ['Cafes', 'Events', 'About'];
+    const secondPartFirstList = ['All Cafes', 'Contact', 'About'];
     const secondPartSecondList = ['Help Center', 'Safety', 'Contact'];
     const secondPartThirdList = ['Privacy', 'Terms'];
     
+    const handleFooterClick = (elem) => {
+        navigate(`/${elem.toLowerCase().replace(" ","-")}`);
+    }
+
     useGSAP(() => {
         gsap.from('.revealing-text-footer', {
             y: 100,
@@ -17,8 +23,9 @@ const FooterSection = () => {
             ease: "expo.out",
             stagger: 0.1,
             scrollTrigger: {
-                trigger: '.revealing-text-footer',
-                start: "top 95%",
+                trigger: sectionRef.current,
+                start: "top 85%",
+                once: true
             }
         })
     }, {scope: sectionRef})
@@ -40,7 +47,7 @@ const FooterSection = () => {
                         secondPartFirstList.map((elem, key) => {
                             return(
                                 <div key={key} className="footer-menu-wrapper">
-                                    <li className='revealing-text-footer'>{elem}</li>
+                                    <li className='revealing-text-footer' onClick={() => handleFooterClick(elem)}>{elem}</li>
                                 </div>
                             )
                         })

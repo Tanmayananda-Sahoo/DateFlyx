@@ -10,10 +10,10 @@ const CafeDetailLocation = () => {
             </div>
             <div className="cafe-location-right">
                 <MapContainer
-                    center={[18.5204, 73.8567]}
-                    zoom={13}
-                    style={{ height: "100vh", width: "100%" }}
-                >
+    center={[18.5204, 73.8567]}
+    zoom={13}
+    style={{ height: "100vh", width: "100%" }}
+>
                     <TileLayer
                         url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />

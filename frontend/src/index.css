@@ -40,6 +40,11 @@
     /* font-family: "Geist"; */
 }
 
+.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
 .app {
     width: 100%;
     min-height: 100vh;
@@ -59,7 +64,7 @@
     padding: 0 2.5vw;
 }
 
-.links {
+/* .links {
     text-decoration: none;
     color: black;
     font-weight: 300;
@@ -74,7 +79,6 @@
     height: auto;
     display: flex;
     background-color: white;
-    /* margin-bottom: 2vw; */
 }
 
 .navbar-logo {
@@ -102,6 +106,86 @@
 .nav-menu {
     cursor: pointer;
     overflow-y: hidden;
+} */
+
+.links {
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    letter-spacing: -0.05rem;
+    font-size: clamp(0.75rem, 0.9vw, 1rem);
+    font-family: 'Inter';
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.navbar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: white;
+}
+
+.navbar-logo {
+    font-family: 'ppNeueMontreal-normal';
+    flex: 1;
+    padding: 0.9vw;
+    overflow: hidden;
+}
+
+.navbar-logo h3 {
+    font-weight: 600;
+    letter-spacing: -0.05rem;
+}
+
+.nav-menu-section {
+    display: flex;
+    gap: clamp(0.8rem, 2vw, 2.5rem);
+    align-items: center;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-menu {
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-menu-section {
+        gap: 1rem;
+        padding: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .links {
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .nav-menu-section {
+        gap: 0.7rem;
+        padding: 0.8rem;
+    }
+
+    .links {
+        font-size: 0.72rem;
+        letter-spacing: 0;
+    }
 }
 
 .hero-section-header {
@@ -138,7 +222,7 @@
     font-size: small;
 }
 
-.sub-hero-section {
+/* .sub-hero-section {
     text-align: center;
     align-content: center;
     height: 100vh;
@@ -175,9 +259,122 @@ button {
     border: none;
     cursor: pointer;
     letter-spacing: -0.02rem;
+} */
+
+
+.sub-hero-section {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 4rem 8%;
 }
 
-.explore-by-location {
+.contents {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+}
+
+.tagline h3 {
+    font-family: 'Geist';
+    font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+    font-weight: 500;
+    letter-spacing: -0.05rem;
+}
+
+.sub-tags h4 {
+    font-family: 'ppNeueMontreal-normal';
+    font-size: clamp(1.5rem, 2.1vw, 2.8rem);
+    font-weight: 500;
+    letter-spacing: -0.06rem;
+    line-height: 1.15;
+}
+
+.explore-btn button,
+button {
+    background-color: black;
+    color: white;
+    font-family: 'ppNeueMontreal-normal';
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+    padding: clamp(0.9rem, 1.5vw, 1.5rem)
+             clamp(1.4rem, 1.9vw, 2rem);
+
+    border: none;
+    cursor: pointer;
+    letter-spacing: -0.02rem;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .sub-hero-section {
+        padding: 3rem 6%;
+    }
+
+    .contents {
+        gap: 1rem;
+    }
+
+    .tagline h3 {
+        font-size: 1rem;
+    }
+
+    .sub-tags h4 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .explore-btn button,
+    button {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .sub-hero-section {
+        padding: 2rem 5%;
+    }
+
+    .contents {
+        margin-bottom: 1.5rem;
+    }
+
+    .tagline h3 {
+        font-size: 0.9rem;
+        letter-spacing: 0;
+    }
+
+    .sub-tags h4 {
+        font-size: 1.6rem;
+        line-height: 1.25;
+        letter-spacing: -0.03rem;
+    }
+
+    .explore-btn button,
+    button {
+        width: 100%;
+        max-width: 280px;
+
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+}
+
+/* .explore-by-location {
     font-family: 'ppNeueMontreal-normal';
     display: flex;
     height: 70vh;
@@ -243,7 +440,6 @@ button {
 .center li {
     text-decoration: none;
     list-style: none;
-    /* font-family: 'ppNeueMontreal-normal'; */
     font-size: 5.2vw;
     letter-spacing: -0.1rem;
     color: #C3C2C1;
@@ -253,8 +449,158 @@ button {
 
 .center li:hover {
     color: black;
+} */
+
+
+.explore-by-location {
+    font-family: 'ppNeueMontreal-normal';
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    margin-bottom: 7vw;
+    padding: 0 5%;
 }
 
+.left,
+.right {
+    flex: 1;
+    position: relative;
+    min-height: 600px;
+}
+
+.location-image {
+    width: clamp(180px, 16vw, 320px);
+    height: clamp(180px, 17vw, 340px);
+
+    object-fit: cover;
+    position: absolute;
+
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.image-0 {
+    left: 15%;
+    top: -20%;
+}
+
+.image-1 {
+    left: 40%;
+    top: 3%;
+}
+
+.image-2 {
+    top: 24%;
+    left: 10%;
+}
+
+.image-3 {
+    top: 50%;
+    left: 40%;
+}
+
+.image-4 {
+    top: 68%;
+    left: 10%;
+}
+
+.center {
+    width: 40%;
+    text-align: center;
+}
+
+.center ul {
+    padding: 0;
+    margin: 0;
+}
+
+.center li {
+    list-style: none;
+    font-size: clamp(2rem, 5.2vw, 6rem);
+    letter-spacing: -0.1rem;
+    color: #C3C2C1;
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;
+    line-height: 1.05;
+}
+
+.center li:hover {
+    color: black;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .explore-by-location {
+        min-height: auto;
+        padding: 4rem 5%;
+    }
+
+    .left,
+    .right {
+        min-height: 450px;
+    }
+
+    .location-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .center li {
+        font-size: 3.5rem;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .explore-by-location {
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .left,
+    .right {
+        display: none;
+    }
+
+    .center {
+        width: 100%;
+    }
+
+    .center li {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+    .explore-by-location {
+        padding: 2rem 5%;
+    }
+
+    .center li {
+        font-size: 2rem;
+        letter-spacing: -0.03rem;
+    }
+}
 .cafe-list-page {
     height: auto;
     width: 100%;
@@ -268,7 +614,7 @@ button {
     overflow: hidden;
 }
 
-.cafe-list-page-header {
+/* .cafe-list-page-header {
     margin-bottom: 8vw;
     font-family: 'ppNeueMontreal-normal';
 }
@@ -281,6 +627,89 @@ button {
 .cafe-list-page-header h3 {
     font-size: 1.7vw;
     font-weight: 200;
+} */
+
+.cafe-list-page-header {
+    font-family: 'ppNeueMontreal-normal';
+
+    margin-bottom: 8vw;
+
+    padding: 0 8%;
+}
+
+.cafe-h1-container,
+.cafe-h3-container {
+    overflow: hidden;
+}
+
+.cafe-list-page-header h1 {
+    font-size: clamp(2.5rem, 3vw, 4rem);
+
+    letter-spacing: -0.08rem;
+    line-height: 1.05;
+
+    margin-bottom: 1rem;
+}
+
+.cafe-list-page-header h3 {
+    font-size: clamp(1rem, 1.7vw, 2rem);
+
+    font-weight: 200;
+
+    line-height: 1.4;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .cafe-list-page-header {
+        padding: 0 6%;
+        margin-bottom: 5rem;
+    }
+
+    .cafe-list-page-header h1 {
+        font-size: 3rem;
+    }
+
+    .cafe-list-page-header h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .cafe-list-page-header {
+        padding: 0 5%;
+        margin-bottom: 4rem;
+    }
+
+    .cafe-list-page-header h1 {
+        font-size: 2.3rem;
+        letter-spacing: -0.05rem;
+        line-height: 1.1;
+    }
+
+    .cafe-list-page-header h3 {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+    .cafe-list-page-header h1 {
+        font-size: 1.9rem;
+        letter-spacing: -0.03rem;
+    }
+
+    .cafe-list-page-header h3 {
+        font-size: 1rem;
+    }
 }
 
 .cafe-list-section {
@@ -353,7 +782,58 @@ button {
     font-size: 1vw;
 }
 
-.review-section-wrapper {
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .component-card {
+        width: 47%;
+        height: auto;
+    }
+
+    .component-card-image {
+        width: 100%;
+        height: 40vw;
+    }
+
+    .component-card-location h4 {
+        font-size: 2rem;
+    }
+
+    .component-card-title p {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .cafe-list-section {
+        gap: 1rem;
+    }
+
+    .component-card {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .component-card-image {
+        width: 100%;
+        height: 70vw;
+    }
+
+    .component-card-location h4 {
+        font-size: 1.4rem;
+    }
+
+    .component-card-title p {
+        font-size: 0.95rem;
+    }
+}
+
+/* .review-section-wrapper {
     overflow-x: hidden;
     margin-bottom: 10vw;
 }
@@ -412,6 +892,161 @@ button {
     font-family: 'ppNeueMontreal-normal';
     font-weight: bold;
     text-align: center;
+} */
+
+.review-section-wrapper {
+    overflow-x: hidden;
+    margin-bottom: 10vw;
+    width: 100%;
+}
+
+.review-section-header {
+    font-family: 'ppNeueMontreal-normal';
+    font-weight: bold;
+    text-align: center;
+    padding: 0 5%;
+}
+
+.review-section-header h1 {
+    font-size: clamp(2rem, 4vw, 4.5rem);
+    letter-spacing: -0.08rem;
+}
+
+.review-section {
+    height: auto;
+    width: max-content;
+
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+
+    padding: 4vw 0;
+}
+
+.review-card-component {
+    width: clamp(280px, 30vw, 500px);
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08),
+        0 12px 24px rgba(0, 0, 0, 0.12),
+        0 24px 48px rgba(0, 0, 0, 0.08);
+
+    border-radius: 10px;
+
+    padding: clamp(1rem, 1.2vw, 1.5rem);
+
+    flex-shrink: 0;
+
+    background: white;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'ppNeueMontreal-normal';
+    font-weight: bold;
+
+    margin-bottom: 1.2rem;
+}
+
+.review-user-name {
+    font-size: clamp(0.95rem, 1vw, 1.1rem);
+}
+
+.review {
+    font-family: 'Geist';
+    font-weight: 400;
+
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    line-height: 1.7;
+
+    margin-bottom: 1.5rem;
+}
+
+.review-ratings {
+    background-color: #e6e4e2;
+
+    border-radius: 6px;
+
+    padding: 0.2rem 0.5rem;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    font-size: 0.9rem;
+}
+
+.review-bottom {
+    font-family: 'Geist Mono';
+
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    text-transform: uppercase;
+    text-align: end;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .review-section-wrapper {
+        margin-bottom: 6rem;
+    }
+
+    .review-card-component {
+        width: 340px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .review-section-wrapper {
+        margin-bottom: 5rem;
+    }
+
+    .review-section-header h1 {
+        font-size: 2.3rem;
+        letter-spacing: -0.05rem;
+    }
+
+    .review-card-component {
+        width: 300px;
+    }
+
+    .review {
+        line-height: 1.6;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+    .review-section-header h1 {
+        font-size: 1.9rem;
+    }
+
+    .review-card-component {
+        width: 260px;
+        padding: 1rem;
+    }
+
+    .review-user-name {
+        font-size: 0.9rem;
+    }
+
+    .review {
+        font-size: 0.85rem;
+    }
+
+    .review-bottom {
+        font-size: 0.75rem;
+    }
 }
 
 .footer-section {
@@ -479,13 +1114,206 @@ button {
     color: white;
 }
 
+@media (max-width: 768px) {
+
+    .footer-section {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .footer-second-part {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .footer-section {
+        padding: 3rem 5%;
+    }
+
+    .footer-second-part {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+
+/* .footer-section {
+    width: 100%;
+
+    padding: 4rem 8%;
+
+    background: #111111;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 6rem;
+
+    margin-top: auto;
+}
+
+.footer-first-part {
+    flex: 1;
+    max-width: 450px;
+}
+
+.footer-menu-wrapper {
+    overflow: hidden;
+}
+
+.footer-first-part h1 {
+    font-family: 'ppNeueMontreal-normal';
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+
+    letter-spacing: -0.08rem;
+    line-height: 1;
+}
+
+.footer-subtext {
+    margin-top: 1rem;
+}
+
+.footer-first-part p {
+    font-family: 'ppNeueMontreal-normal';
+
+    font-size: clamp(0.9rem, 1vw, 1rem);
+
+    line-height: 1.7;
+    color: #b8b8b8;
+}
+
+.footer-second-part {
+    display: flex;
+    gap: clamp(2rem, 5vw, 5rem);
+}
+
+.footer-headers {
+    font-family: 'ppNeueMontreal-normal';
+
+    font-weight: bold;
+
+    font-size: 1rem;
+
+    margin-bottom: 1.2rem;
+
+    color: white;
+}
+
+.footer-lists {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    font-family: 'ppNeueMontreal-normal';
+}
+
+.footer-lists li {
+    margin-bottom: 0.9rem;
+
+    color: #b8b8b8;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.footer-lists li:hover {
+    color: white;
+    transform: translateX(3px);
+}
+
 .footer-second-part-first-list,
 .footer-second-part-second-list,
 .footer-second-part-third-list {
     min-width: 120px;
 }
 
-.get-started-section {
+
+@media (max-width: 1024px) {
+
+    .footer-section {
+        flex-direction: column;
+        gap: 3rem;
+
+        padding: 4rem 6%;
+    }
+
+    .footer-first-part {
+        max-width: 100%;
+    }
+
+    .footer-second-part {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.footer-menu-wrapper {
+    overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+
+    .footer-section {
+        padding: 3rem 6%;
+        gap: 2.5rem;
+    }
+
+    .footer-second-part {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .footer-second-part-first-list,
+    .footer-second-part-second-list,
+    .footer-second-part-third-list {
+        min-width: 140px;
+    }
+
+    .footer-first-part h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .footer-section {
+        padding: 2.5rem 5%;
+    }
+
+    .footer-first-part h1 {
+        font-size: 2.5rem;
+    }
+
+    .footer-first-part p {
+        font-size: 0.9rem;
+    }
+
+    .footer-second-part {
+        flex-direction: column;
+        gap: 1.8rem;
+    }
+
+    .footer-second-part-first-list,
+    .footer-second-part-second-list,
+    .footer-second-part-third-list {
+        min-width: auto;
+    }
+
+    .footer-lists li {
+        margin-bottom: 0.7rem;
+    }
+} */
+
+/* .get-started-section {
     min-height: 100vh;
     background-color: black;
     color: white;
@@ -508,6 +1336,160 @@ button {
     margin-bottom: 2vw;
     overflow: hidden;
     font-weight: 400;
+} */
+
+.get-started-section {
+    min-height: 100vh;
+
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 4rem 8%;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url('https://images.pexels.com/photos/7156283/pexels-photo-7156283.jpeg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 3vw;
+}
+
+.get-started-header {
+    font-family: 'ppNeueMontreal-normal';
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.get-started-header h1 {
+    font-size: clamp(3rem, 7vw, 8rem);
+    letter-spacing: -0.15rem;
+    line-height: 0.95;
+}
+
+.get-started-para {
+    font-family: 'Geist';
+
+    font-weight: 400;
+
+    max-width: 750px;
+
+    margin: 1.5rem auto 2rem auto;
+
+    overflow: hidden;
+}
+
+.get-started-para p {
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    line-height: 1.8;
+}
+
+.get-started-section button {
+    border: none;
+    cursor: pointer;
+    color: white;
+
+    padding: 1rem 2rem;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.get-started-section button:hover {
+    transform: translateY(-4px);
+}
+
+.button-get-started {
+    overflow: hidden;
+}
+
+.button-get-started p {
+    margin: 0;
+
+    font-family: 'ppNeueMontreal-normal';
+    font-size: clamp(0.9rem, 1vw, 1rem);
+
+    white-space: nowrap;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .get-started-section {
+        padding: 4rem 6%;
+    }
+
+    .get-started-header h1 {
+        font-size: 5rem;
+    }
+
+    .get-started-para {
+        max-width: 650px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .get-started-section {
+        padding: 3rem 6%;
+    }
+
+    .get-started-header h1 {
+        font-size: 3.5rem;
+        letter-spacing: -0.08rem;
+    }
+
+    .get-started-para {
+        max-width: 100%;
+        margin: 1rem auto 1.5rem auto;
+    }
+
+    .get-started-para p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .get-started-section button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+    .get-started-header h1 {
+        font-size: 2.8rem;
+        line-height: 1;
+    }
+
+    .get-started-para p {
+        font-size: 0.95rem;
+    }
+
+    .get-started-section button {
+        padding: 1rem;
+    }
+
+    .button-get-started p {
+        font-size: 0.9rem;
+    }
 }
 
 .button-get-started {
@@ -518,7 +1500,7 @@ button {
     overflow: hidden;
 }
 
-.gallery-section {
+/* .gallery-section {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -596,15 +1578,197 @@ button {
 
 .text-wrapper-gallery {
     overflow: hidden;
+} */
+
+.gallery-section {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 2.5vw 0;
+    margin-bottom: 7vw;
+}
+
+.gallery-left {
+    font-family: 'ppNeueMontreal-normal';
+
+    width: 30%;
+    padding-left: 2.5vw;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-left h2 {
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 400;
+    letter-spacing: -0.2rem;
+    line-height: 0.95;
+}
+
+.slider-controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.slider-controls button {
+    border: none;
+    background: transparent;
+
+    font-size: 2rem;
+    cursor: pointer;
+
+    color: black;
+
+    transition: transform 0.3s ease;
+}
+
+.slider-controls button:hover {
+    transform: scale(1.15);
+}
+
+.slider-controls button.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.gallery-right {
+    width: 70%;
+    font-family: 'Geist';
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+}
+
+.image-card {
+    width: clamp(260px, 22vw, 320px);
+    flex-shrink: 0;
+}
+
+.image-card img {
+    width: 100%;
+    height: clamp(420px, 38vw, 550px);
+    object-fit: cover;
+}
+
+.image-card h5 {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.text-wrapper-gallery {
+    overflow: hidden;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .gallery-section {
+        flex-direction: column;
+        gap: 3rem;
+
+        padding: 4rem 5%;
+    }
+
+    .gallery-left {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .gallery-right {
+        width: 100%;
+    }
+
+    .gallery-left h2 {
+        font-size: 4rem;
+    }
+
+    .image-card {
+        width: 300px;
+    }
+
+    .image-card img {
+        height: 450px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .gallery-section {
+        gap: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .gallery-left h2 {
+        font-size: 3rem;
+        letter-spacing: -0.1rem;
+    }
+
+    .slider-controls {
+        margin-top: 1rem;
+    }
+
+    .slider-controls button {
+        font-size: 1.5rem;
+    }
+
+    .image-card {
+        width: 240px;
+    }
+
+    .image-card img {
+        height: 340px;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+    .gallery-section {
+        padding: 3rem 5%;
+    }
+
+    .gallery-left h2 {
+        font-size: 2.4rem;
+    }
+
+    .image-card {
+        width: 220px;
+    }
+
+    .image-card img {
+        height: 300px;
+    }
+
+    .image-card h5 {
+        font-size: 0.8rem;
+    }
+
+    .slider-controls {
+        gap: 0.5rem;
+    }
 }
 
 .contact-page-main {
     width: 100%;
     min-height: 100vh;
-    /* font-family: 'ppNeueMontreal-normal'; */
 }
-
-/* ================= HEADER ================= */
 
 .contact-header {
     text-align: center;
@@ -630,8 +1794,6 @@ button {
 .contact-heading span {
     color: #111;
 }
-
-/* ================= CONTENT ================= */
 
 .contact-content {
     display: flex;
@@ -711,8 +1873,6 @@ button {
     color: black;
 }
 
-/* ================= SOCIAL ================= */
-
 .social-section {
     margin-top: 10vw;
     text-align: center;
@@ -751,8 +1911,152 @@ button {
     transform: translateY(-8px);
 }
 
-/* ================= RESPONSIVE ================= */
+/* Tablet */
 
+@media (max-width: 1024px) {
+
+    .contact-header {
+        margin-bottom: 4rem;
+    }
+
+    .contact-heading {
+        font-size: 2rem;
+        padding: 0 6%;
+    }
+
+    .contact-content {
+        gap: 3rem;
+    }
+
+    .contact-image {
+        height: 700px;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 1rem;
+        padding: 0.8rem 0;
+    }
+
+    .social-section {
+        margin-top: 6rem;
+        margin-bottom: 5rem;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .contact-page-main {
+        padding: 0 5%;
+    }
+
+    .contact-header {
+        margin-bottom: 3rem;
+    }
+
+    .contact-heading {
+        font-size: 1.8rem;
+        padding: 0;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .contact-image {
+        height: 450px;
+    }
+
+    .contact-form-wrapper {
+        width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 1rem;
+        padding: 0.8rem 0;
+    }
+
+    .send-btn {
+        width: 100%;
+        height: 55px;
+        margin-top: 1rem;
+    }
+
+    .contact-extra-info {
+        margin-top: 2rem;
+    }
+
+    .social-section {
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+    }
+
+    .social-icons {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .social-icons a {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+    .contact-heading {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .contact-label {
+        font-size: 0.9rem;
+    }
+
+    .contact-image {
+        height: 320px;
+    }
+
+    .form-group label {
+        font-size: 0.75rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.95rem;
+    }
+
+    .social-heading {
+        font-size: 2rem;
+    }
+
+    .social-icons a {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+
+/* 
 @media (max-width: 992px) {
 
     .contact-content {
@@ -766,9 +2070,9 @@ button {
     .social-icons {
         flex-wrap: wrap;
     }
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
     .contact-page {
         padding: 4rem 6%;
@@ -786,7 +2090,7 @@ button {
         width: 65px;
         height: 65px;
     }
-}
+} */
 
 .about-us-image {
     width: 100%;
@@ -807,6 +2111,51 @@ button {
     text-align: center;
     margin-bottom: 8vw;
 }
+
+.about-us-img-txt {
+    overflow-y: hidden;
+}
+
+/* @media (max-width: 1024px) {
+
+    .about-us {
+        margin-bottom: 6rem;
+    }
+
+    .about-us h2 {
+        font-size: 4rem;
+        padding: 0 8%;
+    }
+} */
+
+
+/* @media (max-width: 768px) {
+
+    .about-us {
+        height: 80vh;
+        margin-bottom: 5rem;
+        padding: 0 5%;
+    }
+
+    .about-us h2 {
+        font-size: 2.8rem;
+        line-height: 1.1;
+    }
+} */
+
+
+/* @media (max-width: 480px) {
+
+    .about-us {
+        height: 70vh;
+    }
+
+    .about-us h2 {
+        font-size: 2rem;
+        letter-spacing: -0.03rem;
+        line-height: 1.15;
+    }
+} */
 
 .about-us-section {
     width: 100%;
@@ -856,6 +2205,92 @@ button {
     margin-bottom: 1.5vw;
 }
 
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .about-us-section {
+        gap: 5%;
+        margin-bottom: 6rem;
+    }
+
+    .about-left p {
+        font-size: 0.85rem;
+    }
+
+    .about-right h2 {
+        font-size: 3rem;
+    }
+
+    .about-right p {
+        width: 80%;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .about-us-section {
+        flex-direction: column;
+        gap: 2rem;
+
+        min-height: auto;
+
+        margin-bottom: 5rem;
+
+        padding: 0 5%;
+    }
+
+    .about-left {
+        text-align: left;
+    }
+
+    .about-left p {
+        font-size: 0.8rem;
+    }
+
+    .about-right {
+        width: 100%;
+    }
+
+    .about-right h2 {
+        font-size: 2.3rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+
+    .about-right p {
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+    .about-us-section {
+        padding: 0 5%;
+    }
+
+    .about-right h2 {
+        font-size: 1.9rem;
+        letter-spacing: -0.03rem;
+    }
+
+    .about-right p {
+        font-size: 0.95rem;
+    }
+
+    .about-left p {
+        font-size: 0.75rem;
+    }
+}
+
 .contact-section-about {
     width: 100%;
     display: flex;
@@ -893,6 +2328,74 @@ button {
     font-family: 'ppNeueMontreal-normal';
 }
 
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .contact-section-about {
+        gap: 5%;
+        margin-bottom: 6rem;
+    }
+
+    .contact-section-about-left p {
+        font-size: 0.85rem;
+    }
+
+    .contact-section-about-right h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .contact-section-about {
+        flex-direction: column;
+        gap: 2rem;
+
+        margin-bottom: 5rem;
+
+        padding: 0 5%;
+    }
+
+    .contact-section-about-left {
+        text-align: left;
+    }
+
+    .contact-section-about-left p {
+        font-size: 0.8rem;
+    }
+
+    .contact-section-about-right {
+        width: 100%;
+    }
+
+    .contact-section-about-right h1 {
+        font-size: 2.3rem;
+        line-height: 1.1;
+        letter-spacing: -0.03rem;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+    .contact-section-about {
+        padding: 0 5%;
+    }
+
+    .contact-section-about-right h1 {
+        font-size: 1.9rem;
+        line-height: 1.15;
+    }
+
+    .contact-section-about-left p {
+        font-size: 0.75rem;
+    }
+}
+
 .about-us-link {
     color: black;
 }
@@ -915,6 +2418,47 @@ button {
     width: 100%;
     height: 100%;
 
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .about-secondary-image {
+        margin-bottom: 6rem;
+    }
+
+    .secondary-image {
+        width: 60%;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .about-secondary-image {
+        justify-content: center;
+        margin-bottom: 5rem;
+        padding: 0 5%;
+    }
+
+    .secondary-image {
+        width: 100%;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+    .about-secondary-image {
+        padding: 0 5%;
+    }
+
+    .secondary-image {
+        width: 100%;
+    }
 }
 
 .contact-section-about-right-text-wrapper {
@@ -945,6 +2489,41 @@ button {
 .cafe-arrow-wrapper:hover .arrow {
     transform: rotate(45deg);
 }
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .cafe-detail-nav {
+        padding: 1rem 1.5rem;
+    }
+
+    .cafe-arrow-wrapper {
+        padding: 0.7rem;
+    }
+
+    .arrow {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .cafe-detail-nav {
+        padding: 1rem;
+    }
+
+    .cafe-arrow-wrapper {
+        padding: 0.8rem;
+    }
+
+    .arrow {
+        font-size: 1.4rem;
+    }
+}
+
 
 .cafe-desc-section {
     height: fit-content;
@@ -981,6 +2560,59 @@ button {
     text-align: left;
 }
 
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .cafe-desc-section {
+        gap: 5%;
+        padding: 5rem 1.5rem;
+    }
+
+    .cafe-desc-left p {
+        font-size: 0.85rem;
+    }
+
+    .cafe-desc-right {
+        width: 65%;
+    }
+
+    .cafe-desc-right h2 {
+        font-size: 2.3rem;
+        line-height: 1.1;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .cafe-desc-section {
+        flex-direction: column;
+        gap: 1.5rem;
+
+        padding: 4rem 1rem;
+    }
+
+    .cafe-desc-left {
+        text-align: left;
+    }
+
+    .cafe-desc-left p {
+        font-size: 0.75rem;
+    }
+
+    .cafe-desc-right {
+        width: 100%;
+    }
+
+    .cafe-desc-right h2 {
+        font-size: 1.9rem;
+        letter-spacing: -0.03rem;
+        line-height: 1.15;
+    }
+}
+
 .cafe-detail-img {
     height: 100vh;
     width: 100%;
@@ -1004,6 +2636,45 @@ button {
     text-transform: uppercase;
 }
 
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .cafe-detail-img {
+        height: 80vh;
+
+        padding-bottom: 1.5rem;
+        padding-right: 1.5rem;
+
+        margin-bottom: 5rem;
+    }
+
+    .cafe-detail-img h1 {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .cafe-detail-img {
+        height: 60vh;
+
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+
+        margin-bottom: 4rem;
+
+        background-position: center center;
+    }
+
+    .cafe-detail-img h1 {
+        font-size: 0.75rem;
+    }
+}
+
+
 .cafe-detail-header {
     height: fit-content;
     width: 100%;
@@ -1024,6 +2695,45 @@ button {
     font-size: 5vw;
     letter-spacing: -0.1rem;
 }
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .cafe-detail-header {
+        padding: 5rem 1.5rem;
+    }
+
+    .cafe-detail-header h5 {
+        font-size: 0.85rem;
+    }
+
+    .cafe-detail-header h1 {
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .cafe-detail-header {
+        padding: 4rem 1rem;
+    }
+
+    .cafe-detail-header h5 {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cafe-detail-header h1 {
+        font-size: 2.5rem;
+        letter-spacing: -0.05rem;
+        line-height: 1.05;
+    }
+}
+
 
 .cafe-detail-location {
     display: flex;
@@ -1049,6 +2759,70 @@ button {
 
 .cafe-location-right {
     width: 60%;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .cafe-detail-location {
+        gap: 5%;
+        min-height: auto;
+
+        padding: 0 1.5rem;
+
+        margin-bottom: 5rem;
+    }
+
+    .cafe-location-left p {
+        font-size: 0.85rem;
+    }
+
+    .cafe-location-right {
+        width: 65%;
+    }
+
+    .cafe-location-right .leaflet-container {
+        height: 70vh !important;
+    }
+
+    .cafe-location-right .leaflet-container {
+        height: 70vh !important;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .cafe-detail-location {
+        flex-direction: column;
+        gap: 1.5rem;
+
+        padding: 0 1rem;
+
+        margin-bottom: 4rem;
+    }
+
+    .cafe-location-left {
+        text-align: left;
+    }
+
+    .cafe-location-left p {
+        font-size: 0.75rem;
+    }
+
+    .cafe-location-right {
+        width: 100%;
+    }
+
+    .cafe-location-right .leaflet-container {
+        height: 50vh !important;
+    }
+
+    .cafe-location-right .leaflet-container {
+        height: 50vh !important;
+    }
 }
 
 .df-hero {
@@ -1437,5 +3211,10 @@ button {
 
     .df-awards {
         gap: 14px;
+    }
+
+    .df-watermark-text {
+        font-size: 18vw;
+        letter-spacing: 0.03em;
     }
 }

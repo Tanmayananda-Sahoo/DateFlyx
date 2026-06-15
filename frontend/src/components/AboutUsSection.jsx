@@ -3,9 +3,15 @@ import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import {useGSAP} from '@gsap/react';
+import {useNavigate} from 'react-router';
 
 const AboutUsSection = () => {
+  const navigate = useNavigate();
   const sectionRef = useRef(null);
+
+  const handleAboutClick = () => {
+    navigate('/all-cafes');
+  }
   useLayoutEffect(() => {
     if (!sectionRef.current) return;
 
@@ -66,7 +72,7 @@ const AboutUsSection = () => {
         <p>
           Whether you're planning a first meeting, a casual coffee outing, or a special celebration with someone you love, finding the right place can make all the difference.Instead of spending hours searching through countless options, you can quickly find venues that match your style and mood. From quiet and intimate cafés to vibrant and trendy hotspots, Dateflyx helps you discover places where meaningful connections can flourish. Start exploring today and turn every date into a beautiful memory worth remembering.
         </p>
-        <button>Explore Cafes</button>
+        <button onClick={handleAboutClick}>Explore Cafes</button>
       </div>
     </div>
   )
